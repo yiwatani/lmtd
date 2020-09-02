@@ -13,9 +13,9 @@
       = link_to @tweet.user.nickname, "/users/#{@tweet.user.id}"
   .container
     - if current_user
-      = form_with(model: [@tweet, @comment], local: true) do |form|
-        = form.text_area :text, rows: "2"
-        = form.submit "コメントする"
+      = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
+        = form.text_area :text, rows: "2", class: "textbox"
+        = form.submit "コメントする", class: "form__submit"
     - else
       %strong
         %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
