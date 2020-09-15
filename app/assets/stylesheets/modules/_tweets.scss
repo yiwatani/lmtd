@@ -41,6 +41,20 @@ body {
   margin: 0;
 }
 
+.bodyContents {
+  display: flex;
+}
+
+.mainContents {
+  width: 70%;
+}
+
+.category {
+  width: 30%;
+  min-height: 600px;
+  background-color: #FFFFAA;
+}
+
 a {
   background: transparent;
 }
@@ -886,9 +900,9 @@ form input[type="submit"]:hover {
 }
 
 footer {
-  margin: 30px auto;
   padding: 10px;
   color: #999999;
+  background-color: #FFCC66;
 }
 
 footer p {
@@ -898,14 +912,34 @@ footer p {
 .search-form {
   text-align: center;
   padding-top: 32px;
+  display: flex;
 }
 
 .search-form .search-input {
-  width: 30%;
-  margin-right: 10px;
+  width: 70%;
+  height: 40px;
+  font-size: 14px;
+  margin: 0 12.5px;
 }
 
 .search-form .search-btn {
-  width: 10%;
+  width: 20%;
+  height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.categoryList {
+  text-align: center;
+  margin: 20px 0;
+  &__content {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+    color: #999999;
+  }
 }
 
