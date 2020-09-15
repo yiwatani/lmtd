@@ -42,14 +42,17 @@ class TweetsController < ApplicationController
 
   def create_like
     if @tweet.likes.find_by(user_id: current_user.id) == nil
-      @tweet = Like.create(user_id: current_user.id, tweet_id: @tweet.id)
+      Like.create(user_id: current_user.id, tweet_id: @tweet.id)
       respond_to do |format|
         format.html { redirect_to root_path}
         format.json
       end
     else
       @tweet.likes.find_by(user_id: current_user.id).destroy
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to root_path}
+        format.json
+      end
     end
   end
 

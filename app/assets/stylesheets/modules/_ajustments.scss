@@ -20,6 +20,21 @@
   margin-top: 25px;
 }
 
-.likeBtn {
+.like {
   color: #aaa;
 }
+
+.likeBtn {
+  color: #aaa;
+  background-color: transparent;
+  border: none;
+}
+
+.likeIcon {
+  margin: 5px 5px 0 0;
+}
+
+.active .likeIcon {
+  font-weight: 900;
+}
+

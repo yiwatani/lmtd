@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get 'search'
     end
     member do
-      get "create_like"
+      post "create_like"
     end
   end
   resources :users, only: :show

@@ -14,10 +14,11 @@
     = link_to tweet.user.nickname, "/users/#{tweet.user.id}"
     - if user_signed_in?
       %span.like
-        = link_to create_like_tweet_path(tweet) ,action: "#{create_like_tweet_path(tweet)}", id: "tweet#{tweet.id}", class: "likeBtn", method: :get  do
-          = icon("fas", "heart", class: "likeBtn")
-          = "#{tweet.likes.count}"
+        = button_to create_like_tweet_path(tweet) ,action: "#{create_like_tweet_path(tweet)}", id: "tweet#{tweet.id}", class: "likeBtn", data: {tweet_id: tweet.id}, remote: true, method: :post  do
+          = icon("far", "heart", class: "likeIcon")
+          %span{class: "tweet#{tweet.id}"}
+            = "#{tweet.likes.count}"
     - else
       %span.like
-        = icon("fas", "heart", class: "likeBtn")
-        %span.likeBtn= "#{tweet.likes.count}"
+        = icon("far", "heart")
+        %span= "#{tweet.likes.count}"
