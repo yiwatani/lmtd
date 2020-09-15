@@ -1,21 +1,40 @@
-.nickName{
+.nickName {
   padding-top: 20px;
 }
 
-.userTub{
+.userTub {
   color: #778899;
   line-height: 31px;
 }
 
-.infoList{
+.infoList {
   color: #696969;
 }
 
-.commentUser{
+.commentUser {
   color: #FFCC66;
 }
 
-.name{
+.name {
   text-align: center;
   margin-top: 25px;
 }
+
+.like {
+  color: #aaa;
+}
+
+.likeBtn {
+  color: #aaa;
+  background-color: transparent;
+  border: none;
+}
+
+.likeIcon {
+  margin: 5px 5px 0 0;
+}
+
+.active .likeIcon {
+  font-weight: 900;
+}
+

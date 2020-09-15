@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:edit, :show]
+  before_action :set_tweet, only: [:edit, :show, :create_like]
   before_action :move_to_index, except: [:index, :show, :search]
   
   def index
@@ -37,6 +37,22 @@ class TweetsController < ApplicationController
     respond_to do |format|
       format.html
       format.json
+    end
+  end
+
+  def create_like
+    if @tweet.likes.find_by(user_id: current_user.id) == nil
+      Like.create(user_id: current_user.id, tweet_id: @tweet.id)
+      respond_to do |format|
+        format.html { redirect_to root_path}
+        format.json
+      end
+    else
+      @tweet.likes.find_by(user_id: current_user.id).destroy
+      respond_to do |format|
+        format.html { redirect_to root_path}
+        format.json
+      end
     end
   end
 

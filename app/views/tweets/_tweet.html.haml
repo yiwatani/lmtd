@@ -12,3 +12,13 @@
   %p= tweet.text
   %span.name
     = link_to tweet.user.nickname, "/users/#{tweet.user.id}"
+    - if user_signed_in?
+      %span.like
+        = button_to create_like_tweet_path(tweet) ,action: "#{create_like_tweet_path(tweet)}", id: "tweet#{tweet.id}", class: "likeBtn", data: {tweet_id: tweet.id}, remote: true, method: :post  do
+          = icon("far", "heart", class: "likeIcon")
+          %span{class: "tweet#{tweet.id}"}
+            = "#{tweet.likes.count}"
+    - else
+      %span.like
+        = icon("far", "heart")
+        %span= "#{tweet.likes.count}"
