@@ -853,7 +853,9 @@ div.contents.row .success h3 {
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
+  color: #696969;
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
