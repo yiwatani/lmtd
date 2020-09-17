@@ -3,13 +3,6 @@
     = form.text_field :keyword, placeholder: "ここに文字を入力してください", class: "search-input"
     = form.submit "検索", class: "search-btn"
   .categoryList
-    .categoryList__content
-      カテゴリ1
-    .categoryList__content
-      カテゴリ2
-    .categoryList__content
-      カテゴリ3
-    .categoryList__content
-      カテゴリ4
-    .categoryList__content
-      カテゴリ5
+    - @categories.each do |category|
+      .categoryList__content
+        = link_to category.name, "#"
