@@ -1,8 +1,7 @@
 class Tweet < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
-  validates :category_id, presence: true
-  validates :text, presence: true
+  validates :text, :category_id, :detail, presence: true
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
