@@ -5,4 +5,4 @@
   .categoryList
     - @categories.each do |category|
       .categoryList__content
-        = link_to category.name, "#"
+        = link_to category.name, category_path(category)
