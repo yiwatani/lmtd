@@ -22,6 +22,11 @@
           = icon("far", "heart")
           %span= "#{@tweet.likes.count}"
   .container
+    .tweetDetails
+      %h4 ＜詳細＞
+      .tweetDetails__content
+        %span.detailText= safe_join(@tweet.detail.split("\n"), tag(:br))
+  .container
     .comments
       %h4 ＜コメント一覧＞
       - if @comments

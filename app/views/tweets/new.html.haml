@@ -3,4 +3,4 @@
     = form_with(model: @tweet, local: true) do |form|
       %h3 新規投稿
       = render partial: "form", locals: { form: form }
-
+      = form.submit "投稿する"

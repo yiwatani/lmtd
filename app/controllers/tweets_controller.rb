@@ -3,7 +3,8 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
   
   def index
-    @tweets = Tweet.includes(:user).order("created_at DESC")
+    @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(10)
+    @categories = Category.all
   end
 
   def new
@@ -58,7 +59,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:image, :text).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:image, :text, :category_id, :detail).merge(user_id: current_user.id)
   end
 
   def set_tweet

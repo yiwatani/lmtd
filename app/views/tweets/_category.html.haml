@@ -1,0 +1,8 @@
+.category
+  = form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
+    = form.text_field :keyword, placeholder: "ここに文字を入力してください", class: "search-input"
+    = form.submit "検索", class: "search-btn"
+  .categoryList
+    - @categories.each do |category|
+      .categoryList__content
+        = link_to category.name, category_path(category)
