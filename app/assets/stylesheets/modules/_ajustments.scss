@@ -1,3 +1,6 @@
+$textColor: #696969;
+$likeColor: #aaa;
+
 .nickName {
   padding-top: 20px;
 }
@@ -8,7 +11,7 @@
 }
 
 .infoList {
-  color: #696969;
+  color: $textColor;
 }
 
 .commentUser {
@@ -21,11 +24,11 @@
 }
 
 .like {
-  color: #aaa;
+  color: $likeColor;
 }
 
 .likeBtn {
-  color: #aaa;
+  color: $likeColor;
   background-color: transparent;
   border: none;
   outline:0;
@@ -40,5 +43,5 @@
 }
 
 .detailText {
-  color: #696969;
+  color: $textColor;
 }
