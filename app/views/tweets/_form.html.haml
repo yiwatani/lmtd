@@ -1,4 +1,7 @@
-= form.text_field :image, placeholder: "画像URLを貼付"
+%label.imageForm(for="tweet_image")
+  %p.formText
+    クリックして画像を選択
+  = form.file_field :image, class: "tweetImage"
 = form.text_area :text, placeholder: "タイトルを入力", rows: "2"
 = form.text_area :detail, placeholder: "詳細を入力", rows: "10"
 = form.collection_select :category_id, Category.all, :id, :name, {prompt:"カテゴリを選択"}, class: "tweetCategory"
