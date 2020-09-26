@@ -45,3 +45,17 @@ $likeColor: #aaa;
 .detailText {
   color: $textColor;
 }
+
+.imageForm {
+  display: block;
+  border: 1px solid #D8D8D8;
+  color: $textColor;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0 15px;
+  padding: 10px;
+}
+
+.tweetImage {
+  display: none;
+}
