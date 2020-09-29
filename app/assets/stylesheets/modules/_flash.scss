@@ -1,0 +1,14 @@
+.Notification {
+  .notice {
+    background-color: #FFFFEE;
+    color: $gray;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .alert {
+    background-color: #F35500;
+    color:$white;
+    text-align: center;
+    padding: 5px 0;
+  }
+}

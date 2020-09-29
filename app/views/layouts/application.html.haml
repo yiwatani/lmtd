@@ -9,7 +9,7 @@
     = javascript_include_tag 'application'
   %body
     %header.header
-      .header__bar.row
+      .header__bar.row.rowHead
         %h1.grid-6
           = link_to "LMTD", "/"
         - if user_signed_in?
@@ -25,6 +25,8 @@
           .grid-6
             = link_to "ログイン", new_user_session_path, class: "post"
             = link_to "新規登録", new_user_registration_path, class: "post"
+            = link_to "ゲストログイン(閲覧用)", users_guest_sign_in_path, method: :post, class: "post"
+    = render 'layouts/notifications'
     = yield
     %footer
       %p
