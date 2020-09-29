@@ -4,7 +4,7 @@ $(function() {
 
   function appendTweet(tweet) {
     if(tweet.user_sign_in && tweet.user_sign_in.id == tweet.user_id){
-      let html = `<div class="content_post" style="background-image: url(${tweet.image});">
+      let html = `<div class="content_post" style="background-image: url(${tweet.image.url});">
                   <div class="more">
                     <span><img src="/assets/arrow_top.png"></span>
                     <ul class="more_list">
@@ -28,7 +28,7 @@ $(function() {
                 </div>`
     search_list.append(html);
     } else {
-      let html = `<div class="content_post" style="background-image: url(${tweet.image});">
+      let html = `<div class="content_post" style="background-image: url(${tweet.image.url});">
                   <div class="more">
                     <span><img src="/assets/arrow_top.png"></span>
                     <ul class="more_list">
