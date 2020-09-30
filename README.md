@@ -17,7 +17,7 @@
 
 ---
 ### 機能一覧
-* ユーザー登録、ログイン  ( devise等 ) 
+* ユーザー登録、ログイン、簡単ログイン ( devise等 ) 
 * 投稿機能
 * 画像アップロード ( carrierwave, minimagick, fog-aws ）
 * 検索機能、コメント機能、いいね機能 ( ajax )
@@ -55,7 +55,7 @@ VSCode<br/>
 
 ---
 ### ER図
-![ER図]<img width="1440" alt="er図" src="https://user-images.githubusercontent.com/67801049/94627166-c62dcc80-02f7-11eb-93c1-a55b4d23339c.png">
+<img width="1440" alt="er図" src="https://user-images.githubusercontent.com/67801049/94627166-c62dcc80-02f7-11eb-93c1-a55b4d23339c.png">
 
 ---
 ### 課題や今後実装したい機能
